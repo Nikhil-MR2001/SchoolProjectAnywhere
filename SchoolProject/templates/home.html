@@ -1,0 +1,592 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Grad School HTML5 Template</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-grad-school.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+
+<!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+  </head>
+
+<body>
+
+   
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Grad</em> School</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+  <ul class="main-menu" style="margin-right:195px;">
+  <li><a href="/">Home</a></li>
+  <li><button onclick="location.href='logout'" style="background-color:transparent; border:none; color:white;     padding: 10px 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.5s;">LOG-OUT</button></li>
+<li><button onclick="location.href='register'" style="background-color:transparent; border:none; ; color:white; padding: 10px 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.5s;"">REGISTER</button></li>
+  <li class="has-submenu">
+    <select onchange="if(this.value) window.location.href=this.value;" style="   background-color:rgba(22,34,57,0.95); color:white; padding: 10px 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.5s;">
+      <option value="">Department</option>
+      <option value="https://en.wikipedia.org/wiki/Commerce">Commerce</option>
+      <option value="https://en.wikipedia.org/wiki/Computer_science">Computer Science</option>
+      <option value="https://en.wikipedia.org/wiki/Engineering">Engineering</option>
+      <option value="https://en.wikipedia.org/wiki/Psychology">Psychology</option>
+      <option value="https://en.wikipedia.org/wiki/Physics">Physics</option>
+    </select>
+  </li>
+</ul>
+
+
+
+
+<!--        <li><a href="#section4">Courses</a></li>-->
+<!--        &lt;!&ndash; <li><a href="#section5">Video</a></li> &ndash;&gt;-->
+<!--        <li><a href="#section6">Contact</a></li>-->
+<!--        <li><a href="https://templatemo.com" class="external">External</a></li>-->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="{% static 'assets/images/course-video.mp4' %}" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h6>Graduate School of Management</h6>
+              <h2><em>Your</em> Classroom</h2>
+              <div style="text-align: center; margin-right:17px; margin-top:12px; ">
+  <button style="background-color:#f5a425; padding-top:10px; padding-bottom:10px; "><a href="login" style="padding-left: 40px; padding-right: 40px; color: white; font-size:35px;"><b>LOGIN</b></a></button>
+</div>
+
+
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-pencil"></i>All Courses</h4>
+              </div>
+              <div class="content-hide">
+                <p> computer-science<br>commerce<br>engineering<br>psychology<br>physics</p>
+                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
+                <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+              </div>
+              <div class="content-hide">
+                <p>Virtual study refers to remote learning using digital tools such as video conferencing, online platforms, and multimedia materials to deliver educational content and facilitate student-teacher interaction.</p>
+                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
+                <div class="scroll-to-section"><a href="#section3">Details</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-book"></i>Blended Learning</h4>
+              </div>
+              <div class="content-hide">
+                <p>Blended learning combines virtual and face-to-face instruction to enhance student engagement and learning outcomes by providing flexible and personalized educational experiences.</p>
+                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
+                <div class="scroll-to-section"><a href="#section4">Read More</a></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Why choose Grad School?</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><a href='#tabs-1'>Best Education</a></li>
+              <li><a href='#tabs-2'>Top Management</a></li>
+              <li><a href='#tabs-3'>Quality Meeting</a></li>
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="{% static 'assets/images/choose-us-image-01.png' %}" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Best Education</h4>
+<p>
+The best education provides students with a well-rounded curriculum that promotes critical thinking, problem-solving, creativity, and social-emotional learning. It also incorporates technology and experiential learning opportunities, such as internships, community service, and study abroad programs. Effective teaching practices, supportive learning environments, and individualized support systems are essential for ensuring student success. The best education system prioritizes equity, diversity, and inclusion, and prepares students for lifelong learning, personal growth, and meaningful contributions to society.</p>                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="{% static 'assets/images/choose-us-image-02.png' %}" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Top Level Management</h4>
+<p>Top management refers to the highest level of executives in an organization responsible for setting strategic goals, making major decisions, and managing overall operations. They develop and implement policies, allocate resources, and establish company culture. Top management includes positions such as CEO, COO, CFO, and CMO. They must possess strong leadership skills, business acumen, and the ability to inspire and motivate employees. Effective top management is essential for the success of any organization.</p>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="{% static 'assets/images/choose-us-image-03.png' %}" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Quality Meeting</h4>
+                    <p>A quality meeting is a forum where team members and stakeholders gather to discuss quality-related issues, review performance data, and identify opportunities for improvement. The meeting may involve representatives from various departments, including production, engineering, marketing, and customer service. The purpose of the meeting is to ensure that the organization's products, services, and processes meet or exceed customer expectations, and to identify and address any quality-related concerns. Effective quality meetings help organizations improve customer satisfaction, reduce costs, and enhance their competitive advantage.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section coming-soon" data-section="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-xs-12">
+          <div class="continer centerIt">
+            <div>
+              <h4>Take <em>any online course</em> and win $326 for your next class</h4>
+              <div class="counter">
+
+                <div class="days">
+                  <div class="value">00</div>
+                  <span>Days</span>
+                </div>
+
+                <div class="hours">
+                  <div class="value">00</div>
+                  <span>Hours</span>
+                </div>
+
+                <div class="minutes">
+                  <div class="value">00</div>
+                  <span>Minutes</span>
+                </div>
+
+                <div class="seconds">
+                  <div class="value">00</div>
+                  <span>Seconds</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="right-content">
+            <div class="top-content">
+              <h6>Register your free account and <em>get immediate</em> access to online courses</h6>
+            </div>
+            <form id="contact" action="" method="get">
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <input name="phone-number" type="text" class="form-control" id="phone-number" placeholder="Your Phone Number" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="button">Get it now</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section courses" data-section="section4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Choose Your Course</h2>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="{% static 'assets/images/courses-01.jpg' %}" alt="Course #1">
+            <div class="down-content">
+              <h4>Digital Marketing</h4>
+              <p>Digital marketing uses online channels like social media and search engines to promote products and services.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-01.png' %}" alt="Author 1">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-02.jpg' %}" alt="Course #2">
+            <div class="down-content">
+              <h4>Business World</h4>
+              <p>Business involves the production, sale, or trade of goods and services to create profit</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-02.png' %}" alt="Author 2">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-03.jpg' %}" alt="Course #3">
+            <div class="down-content">
+              <h4>Visual Media</h4>
+              <p>Visual media includes graphics, images, and videos used for communication, entertainment, and education.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-03.png' %}" alt="Author 3">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-04.jpg' %}" alt="Course #4">
+            <div class="down-content">
+              <h4>Communications</h4>
+              <p>Communication is the exchange of information through speech, writing, or other means to convey a message.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-04.png' %}" alt="Author 4">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Free <i class="fa fa-angle-double-right' %}"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-05.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Business Ethics</h4>
+              <p>Business ethics are moral principles and values that guide behavior in the corporate world</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-05.png' %}" alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-01.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Photography</h4>
+              <p>Photography is the art and practice of capturing and processing images using a camera and related equipment.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-01.png' %}" alt="">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-02.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Web Development</h4>
+              <p>Web development involves creating and maintaining websites using programming languages, frameworks, and web technologies to deliver online content and applications..</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-02.png' %}" alt="">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-03.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Learn HTML CSS</h4>
+              <p>HTML and CSS are programming languages used to create and style web pages for the internet.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-03.png' %}" alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-04.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Social Media</h4>
+              <p>Social media refers to online platforms and tools that allow users to create and share content, and connect with others.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-04.png' %}" alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-05.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Digital Arts</h4>
+              <p>Digital art is a form of artistic expression that uses digital technology to create or manipulate images, video, and sound.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-05.png' %}" alt="">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Free <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'assets/images/courses-01.jpg' %}" alt="">
+            <div class="down-content">
+              <h4>Media Streaming</h4>
+              <p>Web streaming refers to the distribution of audio and video content over the internet in real-time.</p>
+              <div class="author-image">
+                <img src="{% static 'assets/images/author-01.png' %}" alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section video" data-section="section5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <div class="left-content">
+            <span>our presentation is for you</span>
+            <h4>Watch the video to learn more <em>about Grad School</em></h4>
+            <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> for details.
+            <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External URL</a></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <article class="video-item">
+            <div class="video-caption">
+              <h4>Power HTML Template</h4>
+            </div>
+            <figure>
+              <a href="https://www.youtube.com/watch?v=r9LtOG6pNUw" class="play"><img src="{% static 'assets/images/main-thumb.png' %}"></a>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" data-section="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Let’s Keep In Touch</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+        
+        <!-- Do you need a working HTML contact-form script?
+                	
+                    Please visit https://templatemo.com/contact page -->
+                    
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                  <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                  </fieldset>
+                </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="button">Send Message Now</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="map">
+            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><i class="fa fa-copyright"></i> Copyright 2020 by Grad School  
+          
+           | Design: <a href="https://templatemo.com" rel="sponsored" target="_parent">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/isotope.min.' %}js"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/tabs.js' %}"></script>
+    <script src="{% static 'assets/js/video.js' %}"></script>
+    <script src="{% static 'assets/js/slick-slider.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+</html>

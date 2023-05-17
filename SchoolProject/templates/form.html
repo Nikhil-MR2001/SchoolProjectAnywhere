@@ -1,0 +1,252 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login 10</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<style>
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .left-side {
+        width: 50%;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+
+      .right-side {
+        width: 50%;
+        padding-left: 20px;
+        box-sizing: border-box;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      input[type="submit"],
+      button {
+        margin: 20px auto 0;
+        display: block;
+      }
+    </style>
+	</head>
+	<body class="img js-fullheight" style="background-image: url({% static 'images/bg.jpg' %}); background-size: cover;">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+<!--				<div class="col-md-6 text-center mb-5">-->
+<!--					<h2 class="heading-section">Login #10</h2>-->
+<!--				</div>-->
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Have an account?</h3>
+					<form>
+      <div class="left-side">
+        <label for="fname" >First Name:</label>
+        <input type="text" id="fname" name="name" required style="background-color: transparent;">
+
+          <label for="lname" style="margin-top:17px;">Last Name:</label>
+        <input type="text" id="lname" name="name" required style="background-color: transparent;">
+
+        <label for="dob" style="margin-top:17px;">DOB:</label>
+        <input type="date" id="dob" name="dob" required style="background-color: transparent;">
+
+        <label for="age" style="margin-top:19px;">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="150" required style="background-color: transparent; color:white;">
+
+        <br><span >
+          <label for="gender" style="margin-top:17px;">Gender:</label><br>
+          <input type="radio" id="gender-male" name="gender" value="male" required>
+          <label for="gender-male">Male</label>
+          <input type="radio" id="gender-female" name="gender" value="female" required>
+          <label for="gender-female">Female</label>
+        </span>
+
+        <label for="phone-number" style="margin-top:17px;">Phone Number:</label>
+        <input type="tel" id="phone-number" name="phone-number" required style="background-color: transparent;">
+      </div>
+
+      <div class="right-side">
+<!--        <div class="form-group">-->
+<!--          <label for="department">Department:</label>-->
+<!--          <select id="department" name="department" class="form-control" required style="background-color: transparent;>-->
+<!--            <option value="computer science">Computer Science</option>-->
+<!--            <option value="computer science" style="background-color:rgba(22,34,57,0.95);">Computer Science</option>-->
+<!--            <option value="commerce" style="background-color:rgba(22,34,57,0.95);">Commerce</option>-->
+<!--            <option value="engineering" style="background-color: rgba(22,34,57,0.95);">Engineering</option>-->
+<!--            <option value="medicine" style="background-color: rgba(22,34,57,0.95);">Psychology</option>-->
+<!--            <option value="medicine" style="background-color: rgba(22,34,57,0.95);">Physics</option>-->
+<!--          </select>-->
+<!--        </div>-->
+
+
+          <div class="form-group">
+  <label for="department">Department:</label>
+  <select id="department" name="department" class="form-control" required onchange="updateCourseOptions()"  style="background-color: rgba(22,34,57,0.95);">
+    <option value="">--Please select--</option>
+    <option value="computer-science" style="background-color: rgba(22,34,57,0.95);">Computer Science</option>
+    <option value="commerce" style="background-color: rgba(22,34,57,0.95);">Commerce</option>
+    <option value="engineering" style="background-color: rgba(22,34,57,0.95);">Engineering</option>
+    <option value="psychology" style="background-color: rgba(22,34,57,0.95);">Psychology</option>
+    <option value="physics" style="background-color: rgba(22,34,57,0.95);">Physics</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="course" >Course:</label>
+  <select id="course" name="course" class="form-control" required style="background-color: rgba(22,34,57,0.95);">
+    <option value="" >--Please select--</option>
+  </select>
+</div>
+
+<script>
+  function updateCourseOptions() {
+    const departmentSelect = document.getElementById("department");
+    const courseSelect = document.getElementById("course");
+
+    // Clear existing options
+    courseSelect.innerHTML = "<option value=''>--Please select--</option>";
+
+    // Add options based on selected department
+    if (departmentSelect.value === "commerce") {
+      const bcomOption = document.createElement("option");
+      bcomOption.value = "bcom";
+      bcomOption.text = "BCom";
+      courseSelect.add(bcomOption);
+
+      const bbaOption = document.createElement("option");
+      bbaOption.value = "bba";
+      bbaOption.text = "BBA";
+      courseSelect.add(bbaOption);
+    }
+
+    if (departmentSelect.value === "computer-science") {
+      const frondendOption = document.createElement("option");
+      frondendOption.value = "frondend";
+      frondendOption.text = "Front-End";
+      courseSelect.add(frondendOption);
+
+      const backendOption = document.createElement("option");
+      backendOption.value = "backend";
+      backendOption.text = "Back-End";
+      courseSelect.add(backendOption);
+
+      const devopsOption = document.createElement("option");
+      devopsOption.value = "devops";
+      devopsOption.text = "Dev-Ops";
+      courseSelect.add(devopsOption);
+    }
+
+    if (departmentSelect.value === "physics") {
+      const astrophysicsOption = document.createElement("option");
+      astrophysicsOption.value = "astrophysics";
+      astrophysicsOption.text = "Astrophysics";
+      courseSelect.add(astrophysicsOption);
+
+      const quantummechanicsOption = document.createElement("option");
+      quantummechanicsOption.value = "quantummechanics";
+      quantummechanicsOption.text = "Quantum Mechanics";
+      courseSelect.add(quantummechanicsOption);
+    }
+
+    if (departmentSelect.value === "psychology") {
+      const clinicalpsychologyOption = document.createElement("option");
+      clinicalpsychologyOption.value = "clinicalpsychology";
+      clinicalpsychologyOption.text = "Clinical Psychology";
+      courseSelect.add(clinicalpsychologyOption);
+
+      const developmentalpsychologyOption = document.createElement("option");
+      developmentalpsychologyOption.value = "developmentalpsychology";
+      developmentalpsychologyOption.text = "Developmental Psychology";
+      courseSelect.add(developmentalpsychologyOption);
+    }
+
+    if (departmentSelect.value === "engineering") {
+      const mechanicalengineeringOption = document.createElement("option");
+      mechanicalengineeringOption.value = "mechanicalengineering";
+      mechanicalengineeringOption.text = "Mechanical Engineering";
+      courseSelect.add(mechanicalengineeringOption);
+
+      const civilengineeringOption = document.createElement("option");
+      civilengineeringOption.value = "civilengineering";
+      civilengineeringOption.text = "Civil Engineering";
+      courseSelect.add(civilengineeringOption);
+    }
+    // Add options for other departments here
+  }
+</script>
+
+
+        <div class="form-group">
+          <label for="purpose">Purpose:</label>
+          <select id="purpose" name="purpose" class="form-control" required  style="background-color: rgba(22,34,57,0.95);">
+            <option value="">--Please select--</option>
+            <option value="enquiry">For Enquiry</option>
+            <option value="order">Place Order</option>
+            <option value="return">Return</option>
+          </select>
+        </div>
+
+        <label for="materials">Materials Provide:</label>
+        <br>
+        <input type="checkbox" id="notebook" name="notebook" value="notebook">
+        <label for="notebook">Debit Note Book</label>
+
+        <br><input type="checkbox" id="pen" name="pen" value="pen">
+        <label for="pen">Pen</label>
+
+        <br><input type="checkbox" id="exam-papers" name="exam-papers" value="exam-papers">
+        <label for="exam-papers">Exam Papers</label>
+          <br><input type="checkbox" id="Textbook" name="Textbook" value="Textbook">
+        <label for="Textbook">Textbook</label>
+
+  <br><br>
+
+</form>
+<div style="text-align: center; margin-right:1999px; margin-top:2px;">
+  <button style="background-color: rgba(22,34,57,0.95);"><a href="order" style="padding-left: 20px; padding-right: 20px; color: white;">Submit</a></button>
+</div>
+
+
+
+
+<!--	          <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>-->
+<!--	          <div class="social d-flex text-center">-->
+<!--	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>-->
+<!--	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>-->
+<!--	          </div>-->
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+
+
+
+</html>
+
